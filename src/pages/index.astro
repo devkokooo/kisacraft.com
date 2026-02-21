@@ -1,5 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +7,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<main class="w-screen h-screen grid place-items-center bg-radial from-pink-300 to-rose-400">
+		<h1 class="font-bold text-8xl text-pink-800">Kisacraft</h1>
+	</main>
 </Layout>
