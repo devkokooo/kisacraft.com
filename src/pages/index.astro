@@ -7,7 +7,53 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <main class="w-screen h-screen grid place-items-center bg-radial from-pink-300 to-rose-400">
-    <h1 class="font-bold text-8xl text-pink-800">Kisacraft</h1>
+  <main class="w-screen h-screen grid place-items-center">
+    <div>
+      <!-- Title, pink gradient text with white accent border -->
+      <div class="relative grid place-items-center">
+        <!-- Background "accent" border -->
+        <h1 class="title-outline font-bold text-8xl">
+          Kisacraft
+        </h1>
+  
+        <!-- Main title gradient text -->
+        <h1 class="
+          fixed text-transparent bg-clip-text
+          bg-linear-to-t from-red-800 via-rose-600 to-rose-400
+          z-10 font-bold text-8xl
+        ">
+          Kisacraft
+        </h1>
+      </div>
+
+      <!-- Subtitle, cute japanese katakana text -->
+      <div class="mt-6 relative grid place-items-center">
+        <!-- Background "accent" border -->
+        <h2 class="subtitle-outline font-bold text-3xl tracking-tighter">
+          キサクラフト
+        </h2>
+  
+        <!-- Subtitle gradient text -->
+        <h2 class="
+          fixed text-transparent bg-clip-text
+          bg-linear-to-t from-red-800 via-rose-600 to-rose-400
+          z-10 font-bold text-3xl tracking-tighter
+        ">
+          キサクラフト
+        </h2>
+      </div>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .title-outline {
+    -webkit-text-stroke-width: 28px;
+    -webkit-text-stroke-color: var(--color-pink-100);
+  }
+
+  .subtitle-outline {
+    -webkit-text-stroke-width: 16px;
+    -webkit-text-stroke-color: var(--color-pink-100);
+  }
+</style>
