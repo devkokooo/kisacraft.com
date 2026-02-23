@@ -15,7 +15,7 @@ import imgCake from "../assets/cake.png";
         <!-- Title, pink gradient text with white accent border -->
         <div class="relative grid place-items-center">
           <!-- Background "accent" border -->
-          <h1 class="title-outline font-bold text-8xl">
+          <h1 class="title-outline font-custom font-extrabold text-8xl tracking-tight">
             Kisacraft
           </h1>
 
@@ -23,7 +23,7 @@ import imgCake from "../assets/cake.png";
           <h1 class="
             fixed text-transparent bg-clip-text
             bg-linear-to-t from-red-800 via-rose-600 to-rose-400
-            z-10 font-bold text-8xl
+            z-10 font-custom font-extrabold text-8xl tracking-tight
           ">
             Kisacraft
           </h1>
@@ -43,7 +43,7 @@ import imgCake from "../assets/cake.png";
         <!-- Subtitle wrapper -->
         <div class="relative grid place-items-center">
           <!-- Background "accent" border -->
-          <h2 class="subtitle-outline font-bold text-3xl tracking-tighter">
+          <h2 class="subtitle-outline font-custom font-extrabold text-3xl tracking-tighter">
             キサクラフト
           </h2>
 
@@ -51,7 +51,7 @@ import imgCake from "../assets/cake.png";
           <h2 class="
             fixed text-transparent bg-clip-text
             bg-linear-to-t from-red-800 via-rose-600 to-rose-400
-            z-10 font-bold text-3xl tracking-tighter
+            z-10 font-custom font-extrabold text-3xl tracking-tighter
           ">
             キサクラフト
           </h2>
@@ -70,8 +70,13 @@ import imgCake from "../assets/cake.png";
 </Layout>
 
 <style>
+  .font-custom {
+    font-family: "M Plus Rounded 1c", sans-serif;
+    font-style: normal;
+  }
+
   .title-outline {
-    -webkit-text-stroke-width: 28px;
+    -webkit-text-stroke-width: 32px;
     -webkit-text-stroke-color: var(--color-pink-100);
   }
 
