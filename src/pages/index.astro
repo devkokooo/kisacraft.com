@@ -15,7 +15,10 @@ import imgCake from "../assets/cake.png";
         <!-- Title, pink gradient text with white accent border -->
         <div class="relative grid place-items-center">
           <!-- Background "accent" border -->
-          <h1 class="title-outline font-custom font-extrabold text-8xl tracking-tight">
+          <h1 class="
+            title-outline font-custom font-black text-8xl tracking-tight
+            drop-shadow-sm drop-shadow-red-900
+          ">
             Kisacraft
           </h1>
 
@@ -23,7 +26,7 @@ import imgCake from "../assets/cake.png";
           <h1 class="
             fixed text-transparent bg-clip-text
             bg-linear-to-t from-red-800 via-rose-600 to-rose-400
-            z-10 font-custom font-extrabold text-8xl tracking-tight
+            z-10 font-custom font-black text-8xl tracking-tight
           ">
             Kisacraft
           </h1>
@@ -33,17 +36,23 @@ import imgCake from "../assets/cake.png";
       <!-- Subtitle, cute japanese katakana text -->
       <div class="mt-6 flex gap-6 justify-center items-center">
         <!-- Cute image wrapper -->
-        <div class="-m-0.5 p-2.5 rounded-full bg-pink-100">
+        <div class="
+          -m-0.5 p-2.5 rounded-full bg-pink-100
+          drop-shadow-xs drop-shadow-red-900
+        ">
           <Image src={imgJuice} alt="juice" width="32" height="32" class="-rotate-20" />
         </div>
 
         <!-- Heart -->
-        <span class="text-pink-100 text-3xl">♥</span>
+        <span class="text-pink-100 text-3xl drop-shadow-xs drop-shadow-red-900">♥</span>
 
         <!-- Subtitle wrapper -->
         <div class="relative grid place-items-center">
           <!-- Background "accent" border -->
-          <h2 class="subtitle-outline font-custom font-extrabold text-3xl tracking-tighter">
+          <h2 class="
+            subtitle-outline font-custom font-black text-3xl tracking-tighter
+            drop-shadow-sm drop-shadow-red-900
+          ">
             キサクラフト
           </h2>
 
@@ -51,17 +60,20 @@ import imgCake from "../assets/cake.png";
           <h2 class="
             fixed text-transparent bg-clip-text
             bg-linear-to-t from-red-800 via-rose-600 to-rose-400
-            z-10 font-custom font-extrabold text-3xl tracking-tighter
+            z-10 font-custom font-black text-3xl tracking-tighter
           ">
             キサクラフト
           </h2>
         </div>
 
         <!-- Heart -->
-        <span class="text-pink-100 text-3xl">♥</span>
+        <span class="text-pink-100 text-3xl drop-shadow-xs drop-shadow-red-900">♥</span>
 
         <!-- Cute image wrapper -->
-        <div class="-m-0.5 p-2.5 rounded-full bg-pink-100">
+        <div class="
+          -m-0.5 p-2.5 rounded-full bg-pink-100
+          drop-shadow-xs drop-shadow-red-900
+        ">
           <Image src={imgCake} alt="juice" width="32" height="32" class="rotate-10" />
         </div>
       </div>
@@ -70,13 +82,15 @@ import imgCake from "../assets/cake.png";
 </Layout>
 
 <style>
+  /* "Zen Maru Gothic" OR "M PLUS Rounded 1c" */
   .font-custom {
-    font-family: "M Plus Rounded 1c", sans-serif;
+    font-family: "Zen Maru Gothic", sans-serif;
     font-style: normal;
   }
 
   .title-outline {
-    -webkit-text-stroke-width: 32px;
+    /* Value looks weird but this is to prevent glyph holes showing for dots  */
+    -webkit-text-stroke-width: 29.3px;
     -webkit-text-stroke-color: var(--color-pink-100);
   }
 
