@@ -15,9 +15,11 @@ import imgKitsune from "../assets/kitsune3.png";
 import imgBell from "../assets/bell1.png";
 import imgKisaBleh from "../assets/kisa-bleh.png";
 import imgKisaBow from "../assets/kisa-bow.png";
+import imgKisaSilly from "../assets/kisa-silly.png";
 
 import TwitchLogo from "../assets/twitch-logo.svg";
 import DiscordLogo from "../assets/discord-logo.svg";
+import ArrowUpRight from "../assets/arrow-up-right.svg";
 ---
 
 <Layout>
@@ -111,33 +113,46 @@ import DiscordLogo from "../assets/discord-logo.svg";
         </div>
 
         <!-- Server map -->
-        <div class="
-          flex gap-4 items-center
-          bg-pink-100 px-4 py-4 rounded-xl
-          outline-4 outline-rose-400
-        ">
-          <div class="grid place-items-center">
-            <h3 class="text-2xl font-custom-main font-black text-rose-600"> 
-              {kisacraftMapAddr}
-            </h3>
-            <p class="text-base font-custom-main font-semibold text-rose-400">
-              live map
-            </p>
+        <a href=`https://${kisacraftMapAddr}` target="_blank" class="flex items-stretch">
+          <div class="relative">
+            <div class="
+              flex gap-4 items-center h-full
+              bg-pink-100 px-4 py-4 rounded-xl
+              outline-4 outline-rose-400
+            ">
+              <Image src={imgKisaSilly} alt="kisa-silly" width="72" height="72" />
+              <div class="grid place-items-center">
+                <h3 class="text-2xl font-custom-main font-black text-rose-600"> 
+                  {kisacraftMapAddr}
+                </h3>
+                <p class="text-base font-custom-main font-semibold text-rose-400">
+                  live 3D map in browser
+                </p>
+              </div>
+            </div>
+
+            <!-- External link indicator -->
+            <div class="
+              absolute -top-4 -right-4 flex items-center p-3 
+              bg-rose-400 rounded-full
+            ">
+              <ArrowUpRight width="24" height="24" class="text-white stroke-3" />
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="mt-6 flex gap-6 justify-center items-stretch">
         <!-- Twitch Channel -->
-        <a href={kisaTwitchHref} target="_blank">
+        <a href={kisaTwitchHref} target="_blank" class="flex items-stretch">
           <div class="relative">
             <div class="
-              flex gap-4 items-center
+              flex gap-4 items-center h-full
               bg-pink-100 px-4 py-4 rounded-xl
               outline-4 outline-rose-400
             ">
               <Image
-                src={imgKisaBleh} alt="kitsune" width="72" height="72"
+                src={imgKisaBleh} alt="kisa-bleh" width="72" height="72"
                 class="rounded-md"
               />
               <div class="grid place-items-center">
@@ -155,20 +170,20 @@ import DiscordLogo from "../assets/discord-logo.svg";
               absolute -top-4 -right-4 flex items-center p-3 
               bg-rose-400 rounded-full
             ">
-              <TwitchLogo width="24" height="24" fill="currentColor" />
+              <TwitchLogo width="24" height="24" />
             </div>
           </div>
         </a>
 
         <!-- Discord server -->
-        <a href={kisacordHref} target="_blank">
+        <a href={kisacordHref} target="_blank" class="flex items-stretch">
           <div class="relative">
             <div class="
-             flex gap-4 items-center
+             flex gap-4 items-center h-full
              bg-pink-100 px-4 py-4 rounded-xl
              outline-4 outline-rose-400
             ">
-             <Image src={imgKisaBow} alt="kitsune" width="72" height="72" />
+             <Image src={imgKisaBow} alt="kisa-bow" width="72" height="72" />
              <div class="grid place-items-center">
                <h3 class="text-2xl font-custom-main font-black text-rose-600"> 
                  kisacord
@@ -184,7 +199,7 @@ import DiscordLogo from "../assets/discord-logo.svg";
               absolute -top-4 -right-4 flex items-center p-3 
               bg-rose-400 rounded-full
             ">
-              <DiscordLogo width="24" height="24" fill="currentColor" />
+              <DiscordLogo width="24" height="24" />
             </div>
           </div>
         </a>
