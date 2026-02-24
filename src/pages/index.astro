@@ -5,6 +5,10 @@ import Layout from '../layouts/Layout.astro';
 
 import imgJuice from "../assets/juice.png";
 import imgCake from "../assets/cake.png";
+
+const kisacraftAddr = "mc.kisacraft.com";
+import imgKitsune from "../assets/kitsune3.png";
+import imgBell from "../assets/bell1.png";
 ---
 
 <Layout>
@@ -16,7 +20,7 @@ import imgCake from "../assets/cake.png";
         <div class="relative grid place-items-center">
           <!-- Background "accent" border -->
           <h1 class="
-            title-outline font-custom font-black text-8xl tracking-tight
+            title-outline font-custom-main font-black text-8xl tracking-tight
             drop-shadow-sm drop-shadow-red-900
           ">
             Kisacraft
@@ -26,7 +30,7 @@ import imgCake from "../assets/cake.png";
           <h1 class="
             fixed text-transparent bg-clip-text
             bg-linear-to-t from-red-800 via-rose-600 to-rose-400
-            z-10 font-custom font-black text-8xl tracking-tight
+            z-10 font-custom-main font-black text-8xl tracking-tight
           ">
             Kisacraft
           </h1>
@@ -50,7 +54,7 @@ import imgCake from "../assets/cake.png";
         <div class="relative grid place-items-center">
           <!-- Background "accent" border -->
           <h2 class="
-            subtitle-outline font-custom font-black text-3xl tracking-tighter
+            subtitle-outline font-custom-main font-black text-3xl tracking-tighter
             drop-shadow-sm drop-shadow-red-900
           ">
             キサクラフト
@@ -60,7 +64,7 @@ import imgCake from "../assets/cake.png";
           <h2 class="
             fixed text-transparent bg-clip-text
             bg-linear-to-t from-red-800 via-rose-600 to-rose-400
-            z-10 font-custom font-black text-3xl tracking-tighter
+            z-10 font-custom-main font-black text-3xl tracking-tighter
           ">
             キサクラフト
           </h2>
@@ -74,7 +78,27 @@ import imgCake from "../assets/cake.png";
           -m-0.5 p-2.5 rounded-full bg-pink-100
           drop-shadow-xs drop-shadow-red-900
         ">
-          <Image src={imgCake} alt="juice" width="32" height="32" class="rotate-10" />
+          <Image src={imgCake} alt="cake" width="32" height="32" class="rotate-10" />
+        </div>
+      </div>
+
+      <!-- Server IP address, and other socials (twitch, discord) -->
+      <div class="mt-12 flex justify-center items-center">
+        <!-- Server IP link -->
+        <div class="
+          flex gap-4 items-center
+          bg-pink-100 px-4 py-4 rounded-xl
+          outline-2 outline-rose-400
+        ">
+          <Image src={imgKitsune} alt="kitsune" width="72" height="72" />
+          <div class="grid place-items-center">
+            <h3 class="text-2xl font-custom-main font-black text-rose-600"> 
+              {kisacraftAddr}
+            </h3>
+            <p class="text-base font-custom-main font-semibold text-rose-400">
+              sub-only server
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -82,9 +106,13 @@ import imgCake from "../assets/cake.png";
 </Layout>
 
 <style>
-  /* "Zen Maru Gothic" OR "M PLUS Rounded 1c" */
-  .font-custom {
+  .font-custom-main {
     font-family: "Zen Maru Gothic", sans-serif;
+    font-style: normal;
+  }
+
+  .font-custom-second {
+    font-family: "M PLUS Rounded 1c", sans-serif;
     font-style: normal;
   }
 
