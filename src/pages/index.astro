@@ -103,7 +103,7 @@ import ArrowUpRight from "../assets/arrow-up-right.svg";
         ">
           <Image src={imgKitsune} alt="kitsune" width="72" height="72" />
           <div class="grid place-items-center">
-            <h3 class="text-2xl font-custom-main font-black text-rose-600"> 
+            <h3 class="text-2xl font-custom-main font-black text-rose-600 select-all"> 
               {kisacraftAddr}
             </h3>
             <p class="text-base font-custom-main font-semibold text-rose-400">
@@ -113,10 +113,10 @@ import ArrowUpRight from "../assets/arrow-up-right.svg";
         </div>
 
         <!-- Server map -->
-        <a href=`https://${kisacraftMapAddr}` target="_blank" class="flex items-stretch">
+        <a href=`https://${kisacraftMapAddr}` target="_blank" class="group flex items-stretch">
           <div class="relative">
             <div class="
-              flex gap-4 items-center h-full
+              flex gap-4 items-center h-full group-hover:bg-green-100
               bg-pink-100 px-4 py-4 rounded-xl
               outline-4 outline-rose-400
             ">
@@ -144,10 +144,10 @@ import ArrowUpRight from "../assets/arrow-up-right.svg";
 
       <div class="mt-6 flex gap-6 justify-center items-stretch">
         <!-- Twitch Channel -->
-        <a href={kisaTwitchHref} target="_blank" class="flex items-stretch">
+        <a href={kisaTwitchHref} target="_blank" class="group flex items-stretch">
           <div class="relative">
             <div class="
-              flex gap-4 items-center h-full
+              flex gap-4 items-center h-full group-hover:bg-green-100
               bg-pink-100 px-4 py-4 rounded-xl
               outline-4 outline-rose-400
             ">
@@ -164,7 +164,7 @@ import ArrowUpRight from "../assets/arrow-up-right.svg";
                 </p>
               </div>
             </div>
-  
+
             <!-- Twitch logo -->
             <div class="
               absolute -top-4 -right-4 flex items-center p-3 
@@ -176,10 +176,10 @@ import ArrowUpRight from "../assets/arrow-up-right.svg";
         </a>
 
         <!-- Discord server -->
-        <a href={kisacordHref} target="_blank" class="flex items-stretch">
+        <a href={kisacordHref} target="_blank" class="group flex items-stretch">
           <div class="relative">
             <div class="
-             flex gap-4 items-center h-full
+             flex gap-4 items-center h-full group-hover:bg-green-100
              bg-pink-100 px-4 py-4 rounded-xl
              outline-4 outline-rose-400
             ">
