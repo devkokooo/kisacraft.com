@@ -96,19 +96,31 @@ import ArrowUpRight from "../assets/arrow-up-right.svg";
       <!-- Server IP address, server map, and other socials (twitch, discord) -->
       <div class="mt-12 flex flex-col gap-6 items-stretch md:flex-row">
         <!-- Server IP link -->
-        <div class="
-          flex gap-4 items-center w-fit self-center
-          bg-pink-100 px-4 py-4 rounded-xl
-          outline-4 outline-rose-400
-        ">
-          <Image src={imgKitsune} alt="kitsune" width="72" height="72" />
-          <div class="grid place-items-center">
-            <h3 class="text-2xl font-custom-main font-black text-rose-600 select-text"> 
-              {kisacraftAddr}
-            </h3>
-            <p class="text-base font-custom-main font-semibold text-rose-400">
-              sub-only server
-            </p>
+        <div class="relative flex items-stretch self-center">
+          <div class="
+            flex gap-4 items-center w-fit self-center
+            bg-pink-100 px-4 py-4 rounded-xl rounded-tl-none
+            outline-4 outline-rose-400
+          ">
+            <Image src={imgKitsune} alt="kitsune" width="72" height="72" />
+            <div class="grid place-items-center">
+              <h3 class="text-2xl font-custom-main font-black text-rose-600 select-text">
+                {kisacraftAddr}
+              </h3>
+              <p class="text-base font-custom-main font-semibold text-rose-400">
+                sub-only server
+              </p>
+            </div>
+          </div>
+
+          <!-- Status badge -->
+          <div class="
+            absolute -top-5 -left-1 flex items-center px-2 py-1 rounded-md
+            bg-linear-to-t from-red-800 via-rose-600 to-rose-400
+          ">
+            <span class="font-custom-second font-bold text-sm text-pink-100">
+              opens at 1k follows!
+            </span>
           </div>
         </div>
 
